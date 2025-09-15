@@ -5,7 +5,7 @@ from datetime import datetime
 LOGS_DIR = "logs"
 os.makedirs(LOGS_DIR, exist_ok=True) # if it doesn't exist then create it
 
-LOG_FILE = os.path.join(LOGS_DIR, f"log_{datetime.now().strftime("%Y-%m-%d")}.log") # log_2025-08-03.log
+LOG_FILE = os.path.join(LOGS_DIR, f"log_{datetime.now().strftime('%Y-%m-%d')}.log") # log_2025-08-03.log
 
 logging.basicConfig(
     filename=LOG_FILE,

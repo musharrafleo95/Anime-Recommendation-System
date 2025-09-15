@@ -3,4 +3,5 @@ mlruns/
 logs/
 MLOPS_PROJECT_2.egg-info/
 *.py[cod]     # Will match .pyc, .pyo and .pyd files.
-__pycache__/  # Exclude the whole folder
+__pycache__/
+artifacts/
