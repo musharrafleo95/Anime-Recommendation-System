@@ -4,4 +4,3 @@ logs/
 MLOPS_PROJECT_2.egg-info/
 *.py[cod]     # Will match .pyc, .pyo and .pyd files.
 __pycache__/
-artifacts/
