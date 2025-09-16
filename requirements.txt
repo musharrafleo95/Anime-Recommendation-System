@@ -3,3 +3,14 @@ numpy
 setuptools
 google-cloud-storage
 pyyaml
+tensorflow
+comet-ml
+dvc
+dvc-gs
+flask
+joblib
+# only for notebook
+matplotlib
+ipykernel
+wordcloud
+scikit-learn
