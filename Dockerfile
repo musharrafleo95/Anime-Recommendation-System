@@ -4,6 +4,12 @@ FROM python:3.8-slim
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1
 
+# Declare the build argument that we expect to receive from the 'docker build' command
+ARG COMET_API_KEY
+
+# Set it as an environment variable so it's available to subsequent RUN, CMD, and ENTRYPOINT commands
+ENV COMET_API_KEY=${COMET_API_KEY}
+
 # Install system dependencies required by TensorFlow
 RUN apt-get update && apt-get install -y \
     build-essential \
