@@ -38,7 +38,7 @@ pipeline{
                     script{
                         echo 'DVC Pull.....'
                         sh '''
-                        . {VENV_DIR}/bin/activate
+                        . ${VENV_DIR}/bin/activate
                         dvc pull
                         '''
                     }
