@@ -24,7 +24,7 @@ pipeline{
                     python -m venv ${VENV_DIR}
                     . {VENV_DIR}/bin/activate
                     pip install --upgrade pip
-                    pip install --no-cache-dir -e .
+                    pip install -e .
                     '''
 
                 }
