@@ -15,7 +15,7 @@ class ModelTraining:
         self.data_path= data_path
 
         self.experiment = comet_ml.Experiment(
-            api_key="",
+            api_key=os.environ.get('COMET_API_KEY'),
             project_name="mlops-projects",
             workspace="musharraf-ali"
         )

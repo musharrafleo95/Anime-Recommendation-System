@@ -6,6 +6,7 @@ pipeline{
         GCP_PROJECT = 'mlops-471718'
         GCLOUD_PATH = '/var/jenkins_home/google-cloud-sdk/bin'
         KUBECTL_AUTH_PLUGIN = "/usr/lib/google-cloud-sdk/bin"
+        COMET_API_KEY = "CSiime8MQm251ZDLI23s0QCvw"
     }
 
     stages {
