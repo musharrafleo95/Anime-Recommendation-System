@@ -1,0 +1,4 @@
+[core]
+    remote = googleremote
+['remote "googleremote"']
+    url = gs://my-dvc-1995/
