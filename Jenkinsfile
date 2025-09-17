@@ -3,6 +3,9 @@ pipeline{
 
     environment {
         VENV_DIR = ".venv"
+        GCP_PROJECT = 'mlops-471718'
+        GCLOUD_PATH = '/var/jenkins_home/google-cloud-sdk/bin'
+        KUBECTL_AUTH_PLUGIN = "/usr/lib/google-cloud-sdk/bin"
     }
 
     stages {
@@ -24,7 +27,7 @@ pipeline{
                     python -m venv ${VENV_DIR}
                     . ${VENV_DIR}/bin/activate
                     pip install --upgrade pip
-                    pip install -e .
+                    pip install dvc
                     '''
 
                 }
@@ -45,6 +48,20 @@ pipeline{
                 }
             }
         }
+        // // stage start
+        // stage("Build and Push Image to GCR"){
+        //     steps{
+        //         withCredentials([file(credentialsId: 'gcp-key', variable: 'GOOGLE_APPLICATION_CREDENTIALS')]) {
+        //             script{
+        //                 echo 'Build and Push Image to GCR.....'
+        //                 sh '''
+        //                 . ${VENV_DIR}/bin/activate
+        //                 dvc pull
+        //                 '''
+        //             }
+        //         }
+        //     }
+        // }
     
     
     
